@@ -37,7 +37,7 @@ def CopyFile(LocalPath, RemotePath, Ip, HostnameIn):
         ssh.load_host_keys(os.path.expanduser(os.path.join("~", ".ssh", "known_hosts")))
         resultCopyFile = []
         try:
-                ssh.connect(Ip, username="prm_user", password="prmentel123")
+                ssh.connect(Ip, username="XXX", password="XXX")
         except OSError as e:
                 logging.info('CopyFile: ERROR OS EXCEPTION %s ',str(e))
                 StatusCopy = 'ERROR'
@@ -299,4 +299,4 @@ logging.warning('Main: **** Starting Appliaton Distributor (Warning Level)')
 api.add_resource(Distributor, "/Distributor/")
 api.add_resource(GetInfo, "/GetInfo/")
 api.add_resource(GetCSInfo, "/GetCSInfo/")
-ServiceAudio.run(host='192.168.251.77',port=5000,debug=True)
+ServiceAudio.run(host='192.168.X.X',port=5000,debug=True)
