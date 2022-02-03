@@ -291,7 +291,7 @@ class GetCSInfo(Resource):
 
 
 ###################### Main Loop ######################
-logging.basicConfig(filename='/var/log/ServiceAudio/ServiceAudio.log',format='%(asctime)s %(message)s', datefmt='%Y%m%d %H:%M:%S ', level=logging.INFO)
+logging.basicConfig(filename='../log/ServiceAudio.log',format='%(asctime)s %(message)s', datefmt='%Y%m%d %H:%M:%S ', level=logging.INFO)
 logging.debug('Main: **** Starting Appliaton Distributor (Debug Level)')
 logging.info('Main: **** Starting Appliaton Distributor (Info Level)')
 logging.warning('Main: **** Starting Appliaton Distributor (Warning Level)')
