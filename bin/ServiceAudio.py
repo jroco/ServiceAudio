@@ -86,7 +86,7 @@ def CopyFile(LocalPath, RemotePath, Ip, HostnameIn):
         return ({'STATUSCOPY': StatusCopy, 'FILENAMEREMOTE': RemotePath, 'FILENAMELOCAL': LocalPath, 'COPYRESULT': CopyResult, 'HOSTNAME': HostnameIn, 'IP': Ip })
 
 def AskHostServ(CS,VDN):
-        con = cx_Oracle.connect('ivr/ivr01@CVPRODN')
+        con = cx_Oracle.connect('user/passwd@SCHEMA')
         logging.info('AskDbCS: DB Query routine with CS: %s and VDN: %s',CS, VDN)
         result = []
         resultfrmt = []
@@ -114,7 +114,7 @@ def AskHostServ(CS,VDN):
         return resultfrmt
 
 def AskDbCS(CS):
-        con = cx_Oracle.connect('ivr/ivr01@CVPRODN')
+        con = cx_Oracle.connect('user/passwd@SCHEMA')
         logging.info('AskDbCS: DB Query routine with CS: %s ',CS)
         result = []
         resultfrmt = []
@@ -138,7 +138,7 @@ def AskDbCS(CS):
         return resultfrmt
 
 def AskDbServ(CS,VDN):
-        con = cx_Oracle.connect('ivr/ivr01@CVPRODN')
+        con = cx_Oracle.connect('user/passwd@SCHEMA')
         logging.info('AskDbServ: DB Query routine with CS: %s VDN: %s',CS,VDN)
         result = []
         resultfrmt = []
